@@ -2,6 +2,7 @@
 
 + [sqrt(x)](#sqrt(x))
 + [FizzBuzz](#FizzBuzz)
++ [ReverseInteger](#ReverseInteger)
 ## sqrt(x)
 https://leetcode.com/problems/sqrtx/
 ```python
@@ -44,4 +45,25 @@ class Solution(object):
             else:
                 ans.append(str(num))
             return ans
+```
+##ReverseInteger
+https://leetcode.com/problems/reverse-integer/
+```python
+class Solution(object):
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        if x >= 2**31-1 or x <= -2**31: return 0
+        else:
+            string = str(x)
+            if x >= 0 :
+                revstring = string[::-1]
+            else:
+                temp = string[1:] 
+                temp2 = temp[::-1] 
+                revstring = "-" + temp2
+            if int(revstring) >= 2**31-1 or int(revstring) <= -2**31: return 0
+            else: return int(revstring)
 ```
