@@ -3,6 +3,9 @@
 + [sqrt(x)](#sqrt(x))
 + [FizzBuzz](#FizzBuzz)
 + [ReverseInteger](#ReverseInteger)
++ [PalindromeNumber](#PalindromeNumber)
++ [Base7](#Base7)
++ [FibonacciNumber](#FibonacciNumber)
 ## sqrt(x)
 https://leetcode.com/problems/sqrtx/
 ```python
@@ -55,15 +58,67 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        if x >= 2**31-1 or x <= -2**31: return 0
+        string = str(x)
+        if x >= 0 :
+            revstring = string[::-1]
         else:
-            string = str(x)
-            if x >= 0 :
-                revstring = string[::-1]
-            else:
-                temp = string[1:] 
-                temp2 = temp[::-1] 
-                revstring = "-" + temp2
-            if int(revstring) >= 2**31-1 or int(revstring) <= -2**31: return 0
-            else: return int(revstring)
+            temp = string[1:] 
+            temp2 = temp[::-1] 
+            revstring = "-" + temp2
+        return int(revstring)
+```
+##PalindromeNumber
+https://leetcode.com/problems/palindrome-number/
+```python
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x < 0:
+            return False
+        str_1 = str(abs(x))
+        str_2 = str_1[::-1]
+        if str_1 == str_2:
+            return True
+        else:
+            return False
+```
+##Base7
+https://leetcode.com/problems/base-7/
+```python
+class Solution(object):
+    def convertToBase7(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+        ans = ''
+        if num == 0:
+            return '0'
+        negative = False
+        if num < 0:
+            num = abs(num)
+            negative = True
+        c = 0
+        while num:
+            num, c = divmod(num, 7)
+            ans = str(c) + ans
+        if negative is True:
+            return '-' + ans
+        return ans
+```
+##FibonacciNumber
+https://leetcode.com/problems/fibonacci-number/
+```python
+class Solution(object):
+    def fib(self, N):
+        """
+        :type N: int
+        :rtype: int
+        """
+        if N <= 1:
+            return N
+        return self.fib(N-1) + self.fib(N-2)
 ```
