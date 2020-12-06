@@ -1,7 +1,7 @@
 # Math
 
 + [sqrt(x)](#sqrt(x))
-
++ [FizzBuzz](#FizzBuzz)
 ## sqrt(x)
 https://leetcode.com/problems/sqrtx/
 ```python
@@ -22,4 +22,26 @@ class Solution(object):
             else:
                 return mid
         return right
+```
+## FizzBuzz
+https://leetcode.com/problems/fizz-buzz/
+```python
+class Solution(object):
+    def fizzBuzz(self, n):
+        """
+        :type n: int
+        :rtype: List[str]
+        """
+        n
+        ans = []
+        for num in range (1, n+1):
+            if num % 3 == 0 and num % 5 == 0:
+                ans.append('FizzBuzz')
+            elif num % 3 == 0:
+                ans.append('Fizz')
+            elif num % 5 == 0: 
+                ans.append('Buzz')
+            else:
+                ans.append(str(num))
+            return ans
 ```
