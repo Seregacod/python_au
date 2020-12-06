@@ -6,6 +6,7 @@
 + [PalindromeNumber](#PalindromeNumber)
 + [Base7](#Base7)
 + [FibonacciNumber](#FibonacciNumber)
++ [LargestPerimeterTriangle](#Largest Perimeter Triangle)
 ## sqrt(x)
 https://leetcode.com/problems/sqrtx/
 ```python
@@ -121,4 +122,19 @@ class Solution(object):
         if N <= 1:
             return N
         return self.fib(N-1) + self.fib(N-2)
+```
+##LargestPerimeterTriangle
+https://leetcode.com/problems/largest-perimeter-triangle/
+```python
+class Solution(object):
+    def largestPerimeter(self, A):
+        """
+        :type A: List[int]
+        :rtype: int
+        """
+        A.sort()
+        for i in range(len(A) - 3, -1, -1):
+            if A[i] + A[i+1] > A[i+2]:
+                return A[i] + A[i+1] + A[i+2]
+        return 0
 ```
