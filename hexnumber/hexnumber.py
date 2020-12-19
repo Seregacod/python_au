@@ -15,25 +15,12 @@ class LinkedList:
             a.next = Node(num[i])
             a = a.next
 
-    def hex_to_dec(self):
-        letters = ['A', 'B', 'C', 'D', 'E', 'F']
-        a = self.head
-        for i in range(self.len):
-            if a.val in letters:
-                a.val = 10 + letters.index(a.val)
-            else:
-                a.val = int(a.val)
-            a = a.next
-        return self
+    def hex_to_dec(num):
+        return ord(num) - ord('A') + 10 if num >= 'A' and num <= 'F' else ord(num) - ord('0') 
 
-    def dec_to_hex(self):
-        letters = ['A', 'B', 'C', 'D', 'E', 'F']
-        a = self.head
-        for i in range(self.len):
-            if a.val > 9:
-                a.val = letters[a.val - 10]
-            a = a.next
-        return self
+    def dec_to_hex(num):
+        return chr(ord('A') + num - 10) if num > 9 else chr(ord('0') + num)
+
 
     def add(self, second):
         self = self.convert()
