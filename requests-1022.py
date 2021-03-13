@@ -2,7 +2,7 @@
 import json
 import requests
 
-TOKEN = 'ed207598f0a4772c8f0f7914fb4acbb901b0e3c8'
+TOKEN = ''
 
 TASK_PREFIX = ['LEETCODE', 'GENERATOR', 'TRIANGLE', 'HEXNUMBER', 'REQUESTS', 'ITERATOR']
 GROUP = ['1021', '1022']
