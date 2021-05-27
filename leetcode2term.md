@@ -19,7 +19,7 @@
 
 ##Course Schedule II
 https://leetcode.com/problems/course-schedule-ii/
-'''python
+```python
 from collections import defaultdict, deque
 class Solution:
 
@@ -61,11 +61,11 @@ class Solution:
                         zero_indegree_queue.append(neighbor)
 
         return topological_sorted_order if len(topological_sorted_order) == numCourses else []
-   '''
+```
    
    ##Course Schedule
    https://leetcode.com/problems/course-schedule/
-   '''pyhon
+   ```pyhon
    class Solution(object):
     def canFinish(self, numCourses, prerequisites):
         """
@@ -97,10 +97,10 @@ class Solution:
                 if not dfs(i):
                     return False
         return True
-'''
+```
 ##Number of Islands
 https://leetcode.com/problems/number-of-islands/
-'''python
+```python
 class Solution(object):
     def numIslands(self, grid):
         """
@@ -131,10 +131,10 @@ class Solution(object):
                     dfs_visit(grid,(i,j))
                     count += 1
         return count
-'''
+```
 ##Is Graph Bipartite?
 https://leetcode.com/problems/is-graph-bipartite/
-'''python
+```python
 class Solution:
     def isBipartite(self, graph):
         """
@@ -161,10 +161,10 @@ class Solution:
                 if not dfs(i, graph):
                     return False
         return True
-'''
+```
 ##Cheapest Flights Within K Stops
 https://leetcode.com/problems/cheapest-flights-within-k-stops/
-'''python
+```python
 class Solution(object):
     def findCheapestPrice(self, n, flights, src, dst, K):
         """
@@ -198,10 +198,10 @@ class Solution(object):
                         rec[(nei, stops+1)] = summ
                         heapq.heappush(heap, (summ, stops+1, nei))
         return -1
-'''
+```
 ##Shortest Path in Binary Matrix
 https://leetcode.com/problems/shortest-path-in-binary-matrix/
-'''python
+```python
 class Solution(object):
     def shortestPathBinaryMatrix(self, grid):
         """
@@ -220,10 +220,10 @@ class Solution(object):
 				grid[x][y] = 1
 				q.append((x, y, d+1))
 	return -1        
-'''
+```
 ##Maximum Depth of N-ary Tree
 https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
-'''python
+```python
 """
 # Definition for a Node.
 class Node(object):
@@ -246,10 +246,10 @@ class Solution(object):
                 res = max(dfs(child), res)
             return res+1
         return dfs(root)
-'''
+```
 ##Min Stack
 https://leetcode.com/problems/min-stack/
-'''python
+```python
 class MinStack(object):
 
     def __init__(self):
@@ -303,10 +303,10 @@ class MinStack(object):
 # obj.pop()
 # param_3 = obj.top()
 # param_4 = obj.getMin()
-'''
+```
 ##Implement Queue using Stacks
 https://leetcode.com/problems/implement-queue-using-stacks/
-'''python
+```python
 class MyQueue(object):
 
     def __init__(self):
@@ -344,10 +344,10 @@ class MyQueue(object):
 # param_2 = obj.pop()
 # param_3 = obj.peek()
 # param_4 = obj.empty()
-'''
+```
 ##Implement Stack using Queues
 https://leetcode.com/problems/implement-stack-using-queues/
-'''python
+```python
 class MyStack(object):
 
     def __init__(self):
@@ -376,10 +376,10 @@ class MyStack(object):
 # param_2 = obj.pop()
 # param_3 = obj.top()
 # param_4 = obj.empty()
-'''
+```
 ##House Robber II
 https://leetcode.com/problems/house-robber-ii/
-'''python
+```python
 class Solution:
     def rob(self, nums):
         """
@@ -405,10 +405,10 @@ class Solution:
             curr_max = max(curr_max, prev_max+nums[i])
             prev_max = tmp
         return max(rec, curr_max)
-'''
+```
 ##House Robber
 https://leetcode.com/problems/house-robber/
-'''python
+```python
 class Solution(object):
     def rob(self, nums):
         """
@@ -422,10 +422,10 @@ class Solution(object):
         for n in nums:
             prev, curr = curr, max(prev + n, curr)
         return curr
-'''
+```
 ##Design Twitter
 https://leetcode.com/problems/design-twitter/
-'''python
+```python
 class Twitter(object):
 
     def __init__(self):
@@ -454,10 +454,10 @@ class Twitter(object):
 # param_2 = obj.getNewsFeed(userId)
 # obj.follow(followerId,followeeId)
 # obj.unfollow(followerId,followeeId)
-'''
+```
 ##Merge k Sorted Lists
 https://leetcode.com/problems/merge-k-sorted-lists/
-'''python
+```python
 # Definition for singly-linked list.
 # class ListNode(object):
 #     def __init__(self, val=0, next=None):
@@ -484,10 +484,10 @@ class Solution(object):
             if node:
                 q.put((node.val, node))
         return head.next
-'''
+```
 ##K Closest Points to Origin
 https://leetcode.com/problems/k-closest-points-to-origin/
-'''python
+```python
 class Solution(object):
     def kClosest(self, points, k):
         """
@@ -496,5 +496,5 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         return heapq.nsmallest(k, points, lambda (x, y): x * x + y * y)
-'''
+```
   
