@@ -65,7 +65,7 @@ class Solution:
    
    ##Course Schedule
    https://leetcode.com/problems/course-schedule/
-   ```pyhon
+```pyhon
    class Solution(object):
     def canFinish(self, numCourses, prerequisites):
         """
