@@ -384,10 +384,6 @@ https://leetcode.com/problems/sort-list/
 #         self.next = next
 class Solution(object):
     def sortList(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
         if not head or not head.next: return head
         
         def getSize(head):
